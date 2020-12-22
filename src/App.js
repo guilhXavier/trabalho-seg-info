@@ -1,11 +1,9 @@
 import logo from './logo.svg'
 import './App.css'
-import { generateKeyFromPassword } from './service/crypto'
 
 function App() {
   return (
     <div className="App">
-      {console.log(generateKeyFromPassword('hello world'))}
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
