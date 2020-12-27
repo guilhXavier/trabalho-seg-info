@@ -1,13 +1,16 @@
 import React, {useState} from 'react'
 import { generateKeyFromPassword } from '../../../service/secret-key/'
+import { useHistory } from 'react-router-dom'
 import './login.css'
 
 export const Login = () =>{
     const [senha, setSenha] = useState('')
+    const history = useHistory()
 
     const handleSubmit = (event) =>{
         event.preventDefault()
         generateKeyFromPassword(senha)
+        history.push('/criptografia')
     }
 
     return(
