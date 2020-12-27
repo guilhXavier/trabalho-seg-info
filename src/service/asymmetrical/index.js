@@ -1,8 +1,6 @@
-const NodeRSA = require('node-rsa');
-const key = new NodeRSA({b: 512});
+import NodeRSA from 'node-rsa'
+const key = new NodeRSA({ b: 512 })
 
-const text = 'eai xavi';
-const encrypted = key.encrypt(text, 'base64');
-console.log('encrypted: ', encrypted);
-const decrypted = key.decrypt(encrypted, 'utf8');
-console.log('decrypted: ', decrypted);
+export const asymmEncrypt = (text) => key.encrypt(text, 'base64')
+
+export const asymmDecrypt = (encrypted) => key.decrypt(encrypted, 'utf8')
