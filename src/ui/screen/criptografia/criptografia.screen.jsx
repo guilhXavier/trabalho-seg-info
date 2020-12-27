@@ -18,7 +18,7 @@ export const Criptografia = () => {
   const [mensagem, setMensagem] = useState('')
   const [buttonCrypt, setButtonCrypt] = useState(true)
   const textArea = useRef(null)
-  console.log(encryption)
+
   const handleEncryptClick = (event) => {
     event.preventDefault()
     textArea.current.value = ENCRYPT_FN[encryption](mensagem)
